@@ -134,11 +134,12 @@ public class Utility {
 	        int x = y0 + y0/4 - y0/100 +y0/400;
 	        int m0 = m + 12 * ((14 - m) / 12) - 2;
 	        int d0 = (d + x + 31 * m0 / 12) % 7;  
+	        
 	       
 	}
 	public boolean day1(boolean c)
 	{
-	         if(c= 0 <= d <= 6)
+	         if(c= 0 <= d0 <= 6)
 	         {
 
 	          if (c) 
@@ -237,9 +238,10 @@ public class Utility {
 				  }
 		}
 		
-		public  static boolean PrimeNo(int no)
+		/*Prime Range*/
+		public  static boolean PrimeNo(int n)
 		{
-			int temp=no;
+			int temp=n;
 			for(int i=2;i<temp/2;i++)
 			{
 				if(temp%i==0)
@@ -250,6 +252,7 @@ public class Utility {
 			}
 			return true;
 		}
+		/*Binary swap*/
 		public void Binary(int n)
 		{
 		 int a;
@@ -267,12 +270,21 @@ public class Utility {
 			}
 			System.out.println("Binary No of="+x);	
 		}
-		static int swapNibbles(int x) 
-		{ 
-		    return ((x & 0x0F) << 4 | (x & 0xF0) >> 4); 
-		   
-		   
+		public int SwapNibbles(int y)
+		{
+			 
+			
+			int  x = (((y & 0x0F) << 4) |((y & 0xF0) >> 4));
+			System.out.println(x);	
+			return  x; 
+			 
 		}
+		public double CalculateAngleX(int x) {
+			
+			return x%(2*180);
+		}
+		
+		/*Repeated Number*/
 		public void RepeatedNo(int[] arr, int n)
 		{
 
@@ -293,6 +305,8 @@ public class Utility {
 			
 			return x%(2*180);
 		}
+		
+		/*sin.java*/
 		public void SinXSeries(double angleX, int noOddSeries) {
 			
 			int count=1;
@@ -327,7 +341,7 @@ public class Utility {
 			}
 			return fact;
 		}
-
+/*cos.java*/
 		public void CosXSeries(double angleX, int noEvenSeries) {
 			int count=1;
 			
@@ -354,8 +368,41 @@ public class Utility {
 			}
 			
 		}
+		
+		/*Prime Factorial*/
+		public void PrimeFact(int n) 
+		{
+			    int num;
+				String primeNumbers="";
+			      for (int i = 1; i <= n; i++)         
+			      { 		  	  
+			         int counter=0; 	  
+			         for(num =i; num>=1; num--)
+				     {
+			           if(i%num==0)
+				          {
+			 		        counter = counter + 1;
+				          }
+				      }
+			         
+				  if (counter==2)
+				  {
+				    
+				     primeNumbers = primeNumbers + i + " ";
+				  }	
+			         }
+			       System.out.println("Prime numbers from 1 to "+n+" are :");
+			       System.out.println(primeNumbers);
+			
+			}
+		
+		
+}
+		
 
-	}
+		
+		
+ 
 
 
 	
