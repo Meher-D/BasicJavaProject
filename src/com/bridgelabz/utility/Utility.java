@@ -138,7 +138,7 @@ public class Utility {
 	}
 	public boolean day1(boolean c)
 	{
-	         if(c= 0 <= d0 <= 6)
+	         if(c= 0 <= d <= 6)
 	         {
 
 	          if (c) 
@@ -191,7 +191,172 @@ public class Utility {
 	          }
 	         }
 	          } 
+	
+	
+		 public void sqrtNewton(int c)
+		 {
+			 int t;
+			 t=c;
+			 t=(t/c+c)/2;
+			 int epsilon=1+(10^-15);
+			 if(Math.abs(t - c/t) > epsilon*t)
+			 {
+				 t=c;
+				 t=(t/c+c)/2;
+				 System.out.println(t);
+	        	 
+			 }
+		 }
+		public void gamlingSimulation(int stake,int goal,int day)
+		{
+			int win=0;
+			 int trails=0;
+			for(int t=0;t<day;t++)
+			{
+				int cash=stake;
+				  while (cash > 0 && cash < goal)
+				  {
+					  if (Math.random() < 0.5)
+					  {
+						  cash++;
+					  trails++;
+				      }
+				       else
+				      {
+					  cash--;
+					  trails++;
+				      }
+				  if(cash==goal)
+				  {
+					  win++;
+				  }
+				    System.out.println(" Number of wins " + win);
+			        System.out.println("Percent of  win " +  win*1000 / day);
+			        System.out.println("Avg no of  bets made" +trails/ day);
+			      }
+				  }
+		}
+		
+		public  static boolean PrimeNo(int no)
+		{
+			int temp=no;
+			for(int i=2;i<temp/2;i++)
+			{
+				if(temp%i==0)
+				{
+					return false;
+				}
+				
+			}
+			return true;
+		}
+		public void Binary(int n)
+		{
+		 int a;
+		 String x="";
+		 while(n>0)
+		 {
+			 a=n%2;
+			 x=a + "" +x;
+			 n=	n/2;
+		 }
+			while(x.length()<4)
+			{
+				x="0" +x;
+				
+			}
+			System.out.println("Binary No of="+x);	
+		}
+		static int swapNibbles(int x) 
+		{ 
+		    return ((x & 0x0F) << 4 | (x & 0xF0) >> 4); 
+		   
+		   
+		}
+		public void RepeatedNo(int[] arr, int n)
+		{
+
+			for(int i=0;i< arr.length-1;i++)
+			{
+				for(int j=i+1;j<arr.length;j++)
+				{
+					if(arr[i]==arr[j])
+					{
+					System.out.println("Repeated = "+arr[j]);		
+				    }
+					
+				}
+			}
+		}
+
+		public double CalAngleX(int x) {
+			
+			return x%(2*180);
+		}
+		public void SinXSeries(double angleX, int noOddSeries) {
+			
+			int count=1;
+
+			System.out.print("Sin("+angleX+") = ");
+			System.out.print(angleX +" - ");
+			for(int i=3;i<=noOddSeries;) {
+				if(count%2!=0) {
+					System.out.print(Math.pow(angleX, i)+" / "+CalFactorial(i));
+					if(i!=noOddSeries) {
+						System.out.print(" + ");
+					}
+					
+					count++;
+					
+				}else {
+					System.out.print(Math.pow(angleX, i)+" / "+CalFactorial(i));
+					if(i!=noOddSeries) {
+						System.out.print(" - ");	
+					}
+					count++;
+				}
+				i=i+2;
+				
+			}
+			
+		}
+		public int CalFactorial(int number) {
+			int fact=1;
+			for (int i=1;i<=number;i++) {
+				fact*=i;
+			}
+			return fact;
+		}
+
+		public void CosXSeries(double angleX, int noEvenSeries) {
+			int count=1;
+			
+			System.out.print("Sin("+angleX+") = ");
+			System.out.print( "1 - ");
+			for(int i=2;i<=noEvenSeries;) {
+				if(count%2==0) {
+					System.out.print(Math.pow(angleX, i)+" / "+CalFactorial(i));
+					if(i!=noEvenSeries) {
+						System.out.print(" + ");
+					}
+					
+					count++;
+					
+				}else {
+					System.out.print(Math.pow(angleX, i)+" / "+CalFactorial(i));
+					if(i!=noEvenSeries) {
+						System.out.print(" - ");	
+					}
+					count++;
+				}
+				i=i+2;
+				
+			}
+			
+		}
+
 	}
+
 
 	
 
