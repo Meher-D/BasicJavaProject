@@ -1,10 +1,7 @@
 package com.bridgelabz.conditional;
 
 import java.util.Scanner;
-
 import com.bridgelabz.utility.Utility;
-
-
 public class PowerOfTwo {
 
 	

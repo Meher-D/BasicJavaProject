@@ -1,4 +1,5 @@
 package com.bridgelabz.functional;
+import com.bridgelabz.utility.Utility;
 
 import java.util.Scanner;
 
@@ -7,7 +8,7 @@ import com.bridgelabz.utility.Utility;
 public class DayOfWeek {
 
 	public static void main(String[] args) {
-		Utility utility=new Utility();
+    Utility utility=new Utility();
 	Scanner scanner=new Scanner(System.in);
 	boolean Going=true;
 	while(Going)
@@ -40,7 +41,7 @@ public class DayOfWeek {
 			System.out.println("Years between -10000 to 10000");
 		}
 		}
-
+ scanner.close();
 	}
 
 }

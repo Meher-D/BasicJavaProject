@@ -1,13 +1,16 @@
 package com.bridgelabz.utility;
 
 public class Utility {
-
+	
+/*SumOfIntegers Program Logic*/
     public int SumOfIntegers(int firstNumber,int secoundNumber)
     {
     	int result;
     	result=firstNumber+secoundNumber;
     	return result;
     }
+    
+ /*IntOut Program Logic */
     public int Operator1(int FirstNumber,int SecondNumber,int ThirdNumber)
     {
     	int result=FirstNumber+SecondNumber*ThirdNumber;
@@ -28,11 +31,15 @@ public class Utility {
     	int result=FirstNumber%SecondNumber+ThirdNumber;
     	return result;
     }
+    
+/*DoubleOut Program logic*/
     public double DoubleOpt(double FirstNumber,double SecondNumber)
     {
     	double result=FirstNumber+SecondNumber;
     	return result;
     }
+    
+/*Leap Year Program Logic*/
     public boolean LeapYear(int year)
     {
     	if((year%4==0)&&(year%100==0)&&(year%400==0))
@@ -43,12 +50,15 @@ public class Utility {
     	}
     	return true;
     }
+    
+ /*SumOfTwoDice Program Logic*/
     public float random(int max,int min)
     {
     	int range=max;
     	float randnum=(float)(Math.random()*range)+min;
     	return randnum;
     }
+    
     public double maxnum
     (double a,double b)
     {
@@ -58,12 +68,16 @@ public class Utility {
     {
     	return Math.min(a, b);
     }
+    
+ /*Distance Program Logic*/
     public double Euclidean(double x,double y)
     {
     	double result;
     	result=Math.sqrt(x*x+y*y);
     	return result;
     }
+    
+ /*Quadratic Program Logic*/
     public void calculate(double a,double b,double c)
     {
     	double root1,root2;
@@ -91,6 +105,32 @@ public class Utility {
     		System.out.printf("two roots of equation" +a+"x*x+"+b+"x+"+c+"is %f  %f :",root1,root2);
     	}
     }
+    
+    
+    /*WindChill Program Logic*/
+    public static double WindChill(int t, int v)
+	{
+			double x= Math.pow(v, 0.16);
+			double w=35.74+(0.6215*t)+(0.4275*t-35.75)*x;
+			return w;
+			
+	}
+    
+    
+    /*TempreatureConversion Program Logic*/
+    public void celsiusToFahrenheit(int celsius) 
+	{
+		int f= (celsius * 9/5) + 32 ;
+		System.out.println("The fahrenheit degree is: "+f+" for celcius degree:  "+celsius);
+	}
+
+	public void fahrenheittocelsius(int fehrenheit)
+	{
+		 int c=(fehrenheit - 32) * 5/9;
+		 System.out.println("the celsius degree is "+c+" for fehrenheit degree "+fehrenheit);
+	}
+	
+ /*SpringSeason Program Logic*/
     public boolean ValidDate(int month,int day)
     {
      if(month<1 || month>2)
@@ -114,6 +154,8 @@ public class Utility {
        return false;
     }
 
+    
+ /*States5 Program Logic*/
 	public float randum(int max , int min ) 
 	{
 		 int range = max;
@@ -128,6 +170,8 @@ public class Utility {
 	public double minnum1(double a, double b) {
 		 return Math.min(a, b);
 	}
+	
+/*DayOfWeek Program logic*/
 	public int DayOfWeek(int m,int d,int y)
 	{
 		    int y0 = y - (14 - m) / 12;
@@ -193,7 +237,20 @@ public class Utility {
 	          } 
 	
 	
+/*CarLoan Program Logic*/
+	public double LoanCalculator(int principalLoanAmount, int year, double roi) 
+	{
+		double payment, r;
+		int n;
+		n = 12 * year;
+		r = (roi / (12 * 100));
+
+		payment = (principalLoanAmount * r) / (1 - Math.pow(1 + r, -n));
+		return payment;
+	}
 	
+/*SqrtNewton Program Logic*/
+
 		 public void sqrtNewton(int c)
 		 {
 			 int t;
@@ -208,6 +265,8 @@ public class Utility {
 	        	 
 			 }
 		 }
+		 
+/*GamlingSimulation Program Logic*/
 		public void gamlingSimulation(int stake,int goal,int day)
 		{
 			int win=0;
@@ -238,7 +297,7 @@ public class Utility {
 				  }
 		}
 		
-		/*Prime Range*/
+/*Prime Range*/
 		public  static boolean PrimeNo(int n)
 		{
 			int temp=n;
@@ -252,7 +311,7 @@ public class Utility {
 			}
 			return true;
 		}
-		/*Binary swap*/
+/*Binary swap*/
 		public void Binary(int n)
 		{
 		 int a;
@@ -284,7 +343,7 @@ public class Utility {
 			return x%(2*180);
 		}
 		
-		/*Repeated Number*/
+/*Repeated Number*/
 		public void RepeatedNo(int[] arr, int n)
 		{
 
@@ -306,7 +365,7 @@ public class Utility {
 			return x%(2*180);
 		}
 		
-		/*sin.java*/
+/*sin.java*/
 		public void SinXSeries(double angleX, int noOddSeries) {
 			
 			int count=1;
@@ -369,7 +428,7 @@ public class Utility {
 			
 		}
 		
-		/*Prime Factorial*/
+/*Prime Factorial*/
 		public void PrimeFact(int n) 
 		{
 			    int num;

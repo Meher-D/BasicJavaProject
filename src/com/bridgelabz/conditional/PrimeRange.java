@@ -17,9 +17,10 @@ public class PrimeRange {
 	{
 		 boolean PrimeNo=utility.PrimeNo(temp);
          if(PrimeNo)
-{
-	System.out.print(" \t"+temp);
+       {
+	        System.out.print(" \t"+temp);
+	   }
 	}
-	}
+	scanner.close();
 }
 }

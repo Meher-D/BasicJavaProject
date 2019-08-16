@@ -29,7 +29,6 @@ public class Binary1 {
 			 System.out.println("The binary Number is:-"+x);
 		 }
 		 int s=utility.SwapNibbles(b);
-		 
+		 scanner.close();
 	}
-
 }
